@@ -14,10 +14,10 @@ All against [YosysHQ/nextpnr](https://github.com/YosysHQ/nextpnr), opened as dra
 
 | PR | Branch | What it is | Changes results? |
 |---|---|---|---|
-| `--setting` option | `pr/setting-option` | Override internal settings (router and placer tunables) from the command line | no |
-| router1 on congested ECP5 designs | `pr/router1-congestion` | Bounded A* search, rip up only the arcs through a conflicting wire, a capped penalty for ripping up shared wires, a diagnostic that lists the nets with the most search work, enabled by default on ECP5 | yes, ECP5 only |
-| placer speedups | `pr/placer-perf` | HeAP and SA stop recomputing things that did not change | no, bit-identical |
-| `NDEBUG` in Release | `pr/release-ndebug` | The CMake Release flags drop `-DNDEBUG`, so debug checks run in release builds | no |
+| [#1826](https://github.com/YosysHQ/nextpnr/pull/1826) `--setting` option | `pr/setting-option` | Override internal settings (router and placer tunables) from the command line | no |
+| [#1827](https://github.com/YosysHQ/nextpnr/pull/1827) router1 on congested ECP5 designs | `pr/router1-congestion` | Bounded A* search, rip up only the arcs through a conflicting wire, a capped penalty for ripping up shared wires, a diagnostic that lists the nets with the most search work, enabled by default on ECP5 | yes, ECP5 only |
+| [#1828](https://github.com/YosysHQ/nextpnr/pull/1828) placer speedups | `pr/placer-perf` | HeAP and SA stop recomputing things that did not change | no, bit-identical |
+| [#1829](https://github.com/YosysHQ/nextpnr/pull/1829) `NDEBUG` in Release | `pr/release-ndebug` | The CMake Release flags drop `-DNDEBUG`, so debug checks run in release builds | no |
 
 The router2 abort on ECP5 designs with a promoted global clock is already proposed upstream in #1824 (issue #1823),
 so there is no PR from here for it; I confirmed it on a 45F there.
